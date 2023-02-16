@@ -21,7 +21,7 @@ h4,
 h5,
 h6,
 p {
-  margin: 0px;
+  margin: 0;
 }
 a {
   margin: 0;
@@ -46,14 +46,15 @@ section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
+.with-border {
+  border-bottom: 1px solid;
+  border-color: var(--border-color);
+}
 /* Header styling*/
 
 .header-content {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid;
-  border-color: var(--border-color);
   height: 80px;
 }
 
@@ -63,7 +64,10 @@ section {
   font-size: 26px;
   color: var(--logo-text-color);
   text-decoration: none;
-  margin-right: auto;
+}
+
+.nav-section {
+  margin-left: 93px;
 }
 .nav-web {
   color: var(--active-color);
@@ -75,12 +79,14 @@ section {
   gap: 46px;
   margin-left: 93px;
   text-decoration: none;
-  list-style-type: none;
 }
 .nav-list-item {
   text-decoration: none;
   font-weight: 500;
   color: var(--main-text-color);
+}
+.current-page {
+  color: var(--active-color);
 }
 
 header a:hover,
@@ -92,7 +98,6 @@ header a:focus {
   display: flex;
   gap: 50px;
   margin-left: auto;
-  list-style-type: none;
 }
 
 .contact-item {
@@ -116,11 +121,23 @@ header a:focus {
   margin-bottom: 30px;
   width: 696px;
 }
+
 .hero {
   background-color: var(--dark-background-color);
   margin: 0 auto;
   text-align: center;
   padding: 200px 0;
+}
+.hero-image {
+  background-image: linear-gradient(
+      90deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 0%
+    ),
+    url(./images/Imghero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .hero-button {
   width: 200px;
@@ -147,7 +164,6 @@ button:focus {
   letter-spacing: 0.03em;
 }
 .futures-list {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -160,15 +176,18 @@ button:focus {
   line-height: 1.71;
   font-size: 14px;
   letter-spacing: 0.03em;
-  width: 270px;
+  flex-basis: calc((100%-90px) / 4);
 }
 /* work section styling */
 
 .work-list {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   gap: 30px;
+}
+
+.work-list > li {
+  flex-basis: calc((100%-60px) / 3);
 }
 .work-title {
   text-align: center;
@@ -198,8 +217,12 @@ button:focus {
   gap: 30px;
 }
 .team-list-item {
-  list-style-type: none;
+  background-color: var(--background-color);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .team-info {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -208,7 +231,6 @@ button:focus {
 .team-member {
   font-weight: 500;
   font-size: 16px;
-
   line-height: 1.19;
   initial-letter: 0.03em;
   margin-bottom: 10px;
@@ -219,7 +241,15 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--paragraf-text-color);
 }
-
+.icon-class {
+  display: flex;
+}
+.social-icons {
+  display: flex;
+}
+.icons {
+  display: flex;
+}
 /* Footer styles */
 
 footer {
@@ -241,9 +271,9 @@ footer {
 }
 
 footer a {
-  list-style-type: none;
   text-decoration: none;
 }
+
 footer a:hover,
 footer a:focus {
   color: var(--active-color);
@@ -266,6 +296,7 @@ footer a:focus {
   line-height: 1.46;
   color: var(--secondary-text-color);
   font-family: var(--main-font);
+  font-style: normal;
   letter-spacing: 0.03em;
 }
 
@@ -288,12 +319,12 @@ footer a:focus {
   gap: 8px;
   margin-bottom: 50px;
 }
-.portfolio-view {
-  display: flex;
-  flex-wrap: wrap;
+
+.card-image {
+  display: block;
+  margin-bottom: 20px;
 }
 .filters-item {
-  list-style-type: none;
   text-align: center;
 }
 .button-port {
@@ -302,12 +333,33 @@ footer a:focus {
   border-radius: 4px;
   border: none;
 }
-.portfolio-view > li {
-  list-style-type: none;
+.button-port:hover {
+  box-shadow: 0 3px 3px 3px rgba(238, 238, 238, 1);
 }
 .portfolio-view {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 30px;
-  margin: auto;
+  margin-left: 0;
+}
+
+.img-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.71;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+  margin-left: 24px;
+}
+.img-text {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: var(--paragraf-text-color);
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+.card-list-item {
+  margin: 0 auto;
 }
