@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="style.css" rel="stylesheet" />
-    <title>efektywne rozwiązania dla waszego biznesu</title>
+    <title>kreatywne rozwiązania dla waszego biznesu</title>
   </head>
   <body>
     <header class="header-view">
@@ -40,14 +40,20 @@
           </ul>
         </nav>
         <ul class="contact-list">
-          <li>
+          <li class="contact-set">
             <a class="contact-item" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+              ><svg height="12" width="16" class="icon-contact">
+                <use href="./images/icons/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contact-set">
             <a class="contact-item" href="tel:+48 111 111 111"
-              >+48 111 111 111</a
+              ><svg height="16" width="12" class="icon-contact">
+                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +48 111 111 111</a
             >
           </li>
         </ul>
@@ -55,7 +61,7 @@
     </header>
 
     <main>
-      <section class="hero hero-image">
+      <section class="hero section">
         <div class="container">
           <h1 class="hero-title">efektywne rozwiązania dla waszego biznesu</h1>
 
@@ -63,8 +69,9 @@
         </div>
       </section>
 
-      <section class="futures">
+      <section class="futures section">
         <div class="container">
+          <h2 class="visually-hidden">Nasze Atuty</h2>
           <ul class="futures-list">
             <li class="futures-item">
               <h2 class="futures-title">lorem ipsum</h2>
@@ -101,24 +108,36 @@
         </div>
       </section>
 
-      <section class="work">
+      <section class="work section">
         <div class="container">
           <h2 class="work-title">Czym się zajmujemy</h2>
           <ul class="work-list">
             <li>
-              <img src="images/img1.jpg" alt="opis obrazu 1" />
+              <img
+                src="images/img1.jpg"
+                class="work-image"
+                alt="opis obrazu 1"
+              />
             </li>
             <li>
-              <img src="images/img2.jpg" alt="opis obrazu 2" />
+              <img
+                src="images/img2.jpg"
+                class="work-image"
+                alt="opis obrazu 2"
+              />
             </li>
             <li>
-              <img src="images/img3.jpg" alt="opis obrazu 3" />
+              <img
+                src="images/img3.jpg"
+                class="work-image"
+                alt="opis obrazu 3"
+              />
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="team-class">
+      <section class="team-class section">
         <div class="container">
           <h2 class="team-title">Nasz zespół</h2>
           <ul class="team-list">
