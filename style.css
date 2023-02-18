@@ -13,6 +13,7 @@
   --container-color: #eeeeee;
   --main-font: Roboto, sans-serif;
   --border-color: #ececec;
+  --footer-icon-color: rgba(255, 255, 255, 0.1);
 }
 h1,
 h2,
@@ -118,12 +119,18 @@ header a:focus {
   fill: var(--paragraf-text-color);
   margin-right: 10px;
 }
-.icon-contact:hover,
+.contact-set:hover,
+.contact-set:focus {
+  --icon-color: var(--active-color);
+  color: var(--active-color);
+}
+/* .icon-contact:hover,
 .icon-contact:focus,
 .contact-item:hover,
 .contact-item:focus {
-  fill: #2196f3;
-}
+  color: #2196f3;
+  fill: var(--icon-color);
+} */
 
 .hero-title {
   font-weight: 900;
@@ -176,6 +183,14 @@ button:focus {
 }
 /* futures section styling*/
 
+.futures-icon-section {
+  background-color: var(--background-team-section);
+  padding: 25px 100px;
+  border-radius: 4px;
+}
+.futures-icon {
+  fill: currentColor;
+}
 .futures-title {
   text-transform: uppercase;
   font-weight: 700;
@@ -183,6 +198,7 @@ button:focus {
   line-height: 1;
   font-size: 14px;
   letter-spacing: 0.03em;
+  margin-top: 30px;
 }
 .futures-list {
   display: flex;
@@ -266,21 +282,44 @@ button:focus {
   color: var(--paragraf-text-color);
 }
 .icon-class {
-  display: flex;
+  fill: var(--icon-color);
+  display: block;
 }
 .social-icons {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
 }
-.icons {
+.social-icons > li,
+.social-icons-footer > li {
+  padding: 12px 12px;
+  border-radius: 50%;
+}
+
+.social-icons li:hover,
+.social-icons li:focus {
+  background-color: var(--active-color);
+
+  fill: var(--secondary-text-color);
+  cursor: pointer;
+}
+/* .icon:hover {
+  fill: var(--secondary-text-color);
+} */
+/* .icons {
   display: flex;
-}
+} */
 /* Footer styles */
 
 footer {
   padding: 60px 0;
   background-color: var(--dark-background-color);
 }
-
+.footer-set {
+  display: block;
+}
 .footer-logo {
   font-family: Raleway;
   font-weight: 700;
@@ -329,6 +368,32 @@ footer a:focus {
 
 .contact-gap:not(:last-child) {
   margin-bottom: 9px;
+}
+.social-icons-footer li {
+  border-radius: 50%;
+  background-color: var(--footer-icon-color);
+}
+.social-icons-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer-join {
+  margin-left: 70px;
+  margin-top: 30px;
+}
+.join-header-footer {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+}
+.footer-flex {
+  display: flex;
+}
+.list-icons-footer:hover {
+  background-color: var(--active-color);
+  fill: var(--secondary-text-color);
+  cursor: pointer;
 }
 /* main portfolio section */
 
