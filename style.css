@@ -63,6 +63,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /* Header styling*/
 
 .header-content {
@@ -116,21 +117,15 @@ header a:focus {
   align-items: center;
 }
 .icon-contact {
-  fill: var(--paragraf-text-color);
   margin-right: 10px;
+  fill: var(--paragraf-text-color);
 }
+
+
 .contact-set:hover,
 .contact-set:focus {
-  --icon-color: var(--active-color);
-  color: var(--active-color);
+  --paragraf-text-color: var(--active-color);
 }
-/* .icon-contact:hover,
-.icon-contact:focus,
-.contact-item:hover,
-.contact-item:focus {
-  color: #2196f3;
-  fill: var(--icon-color);
-} */
 
 .hero-title {
   font-weight: 900;
@@ -142,7 +137,6 @@ header a:focus {
   color: var(--secondary-text-color);
   letter-spacing: 0.06em;
   margin: 0 auto;
-  /* margin-bottom: 30px; */
   width: 696px;
 }
 .hero {
@@ -165,8 +159,6 @@ header a:focus {
 .hero-button {
   background-color: var(--active-color);
   color: var(--secondary-text-color);
-  /* width: 200px;
-  height: 50px; */
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -189,7 +181,7 @@ button:focus {
   border-radius: 4px;
 }
 .futures-icon {
-  fill: currentColor;
+  fill: var(--icon-color);
 }
 .futures-title {
   text-transform: uppercase;
@@ -302,16 +294,9 @@ button:focus {
 .social-icons li:focus {
   background-color: var(--active-color);
 
-  fill: var(--secondary-text-color);
+  --icon-color: var(--secondary-text-color);
   cursor: pointer;
 }
-/* .icon:hover {
-  fill: var(--secondary-text-color);
-} */
-/* .icons {
-  display: flex;
-} */
-/* Footer styles */
 
 footer {
   padding: 60px 0;
@@ -390,10 +375,44 @@ footer a:focus {
 .footer-flex {
   display: flex;
 }
-.list-icons-footer:hover {
+.list-icons-footer:hover,
+.list-icons-footer:focus {
   background-color: var(--active-color);
-  fill: var(--secondary-text-color);
+  --icon-color: var(--secondary-text-color);
   cursor: pointer;
+}
+/* Our clients section styling */
+
+.clients {
+  text-align: center;
+}
+.clients-section-title {
+  font-weight: 700;
+
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-list-item {
+  width: 170px;
+  height: 92px;
+  border: solid 1px;
+  border-color: var(--icon-color);
+  border-radius: 4px;
+}
+.clients-list-item:hover,
+.clients-list-item:focus {
+  border-color: var(--active-color);
+  --icon-color: var(--active-color);
+}
+.clients-icon-class {
+  fill: var(--icon-color);
+  margin: 16px 32px;
 }
 /* main portfolio section */
 
@@ -418,7 +437,8 @@ footer a:focus {
   font-weight: 500;
   line-height: 1.62;
 }
-.button-port:hover {
+.button-port:hover,
+.button-port:focus {
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 .portfolio-view {
