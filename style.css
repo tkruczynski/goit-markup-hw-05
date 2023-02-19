@@ -180,9 +180,9 @@ button:focus {
   padding: 25px 100px;
   border-radius: 4px;
 }
-.futures-icon {
+/* .futures-icon {
   fill: var(--icon-color);
-}
+} */
 .futures-title {
   text-transform: uppercase;
   font-weight: 700;
