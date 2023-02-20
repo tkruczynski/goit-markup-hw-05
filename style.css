@@ -426,9 +426,7 @@ footer a:focus {
 .card-image {
   display: block;
 }
-/* .filters-item {
-  text-align: center;
-} */
+
 .button-port {
   background-color: var(--background-team-section);
   padding: 6px 24px;
@@ -476,4 +474,5 @@ footer a:focus {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
