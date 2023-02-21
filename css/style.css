@@ -468,7 +468,7 @@ footer a:focus {
   color: var(--paragraf-text-color);
 }
 .card-list-item {
-  flex-basis: ((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 .card-list-item:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
