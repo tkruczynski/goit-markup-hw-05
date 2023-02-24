@@ -80,6 +80,7 @@ body {
 
 .nav-section {
   margin-left: 93px;
+  margin-top: auto;
 }
 .nav-web {
   color: var(--active-color);
@@ -94,8 +95,13 @@ body {
   font-weight: 500;
   color: var(--main-text-color);
 }
-.current-page {
-  color: var(--active-color);
+
+.underline::after {
+  content: "";
+  background-color: var(--active-color);
+  height: 4px;
+  display: block;
+  border-radius: 2px;
 }
 
 header a:hover,
@@ -103,6 +109,12 @@ header a:focus {
   color: var(--active-color);
   cursor: pointer;
 }
+.current-page {
+  color: var(--active-color);
+  display: block;
+  padding-bottom: 28px;
+}
+
 .contact-list {
   display: flex;
   gap: 50px;
@@ -426,9 +438,42 @@ footer a:focus {
 .card-image {
   display: block;
 }
-/* .filters-item {
-  text-align: center;
-} */
+
+.card-image-layer {
+  position: relative;
+  width: 100%;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--active-color);
+  opacity: 0.9;
+  transform: translatey(100%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-image-layer:hover .overlay {
+  transform: translateX(0);
+}
+
+.overlay > p {
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: left;
+  color: var(--secondary-text-color);
+  padding: 49px 45px 49px 24px;
+}
+.card-image-layer:hover,
+/* .overlay:hover  */ {
+  transform: translatey(0);
+}
 .button-port {
   background-color: var(--background-team-section);
   padding: 6px 24px;
@@ -443,7 +488,6 @@ footer a:focus {
 }
 .portfolio-view {
   display: flex;
-  /* align-items: center; */
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -474,5 +518,6 @@ footer a:focus {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
