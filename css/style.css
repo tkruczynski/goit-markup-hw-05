@@ -227,10 +227,29 @@ button:focus {
 
 .work-list > li {
   flex-basis: calc((100% - 60px) / 3);
+  position: relative;
 }
+
 .work-image {
   display: block;
 }
+.work-overlay-section {
+  position: absolute;
+  text-transform: uppercase;
+  background-color: var(--dark-background-color);
+  width: 100%;
+  opacity: 0.8;
+  height: 70px;
+  bottom: 0;
+}
+.work-overlay-section > p {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  color: var(--secondary-text-color);
+  padding-top: 27px;
+}
+
 .work-title {
   text-align: center;
   font-weight: 700;
@@ -459,7 +478,8 @@ footer a:focus {
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.card-image-layer:hover .overlay {
+.card-image-layer:hover .overlay,
+.img-section-active:hover .overlay {
   transform: translateX(0);
 }
 
@@ -470,10 +490,7 @@ footer a:focus {
   color: var(--secondary-text-color);
   padding: 49px 45px 49px 24px;
 }
-.card-image-layer:hover,
-/* .overlay:hover  */ {
-  transform: translatey(0);
-}
+
 .button-port {
   background-color: var(--background-team-section);
   padding: 6px 24px;
