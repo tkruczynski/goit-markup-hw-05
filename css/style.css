@@ -235,7 +235,7 @@ button:focus {
 }
 .work-overlay-section {
   position: absolute;
-  text-transform: uppercase;
+  
   background-color: var(--dark-background-color);
   width: 100%;
   opacity: 0.8;
@@ -245,6 +245,7 @@ button:focus {
 .work-overlay-section > p {
   font-size: 14px;
   line-height: 1.14;
+  text-transform: uppercase;
   text-align: center;
   color: var(--secondary-text-color);
   padding-top: 27px;
