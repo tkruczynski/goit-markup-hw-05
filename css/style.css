@@ -14,6 +14,8 @@
   --main-font: Roboto, sans-serif;
   --border-color: #ececec;
   --footer-icon-color: rgba(255, 255, 255, 0.1);
+  --backdrop-background-color: rgba(0, 0, 0, 0.2);
+  --modal-button-stroke: rgba(0, 0, 0, 0.1);
 }
 h1,
 h2,
@@ -235,7 +237,6 @@ button:focus {
 }
 .work-overlay-section {
   position: absolute;
-  
   background-color: var(--dark-background-color);
   width: 100%;
   opacity: 0.8;
@@ -445,6 +446,54 @@ footer a:focus {
 .clients-icon-class {
   fill: var(--icon-color);
   margin: 16px 32px;
+}
+/* Modal box styling*/
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-background-color);
+  z-index: 100;
+  visibility: visible;
+  opacity: 1;
+  transition-property: opacity, visibility;
+  animation: infinite;
+  animation-duration: 1000ms;
+  animation-delay: 200ms;
+
+  transform: scale(0);
+  transform: scale(0.25);
+  transform: scale(0.5);
+  transform: scale(0.75);
+  transform: scale(1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background-color: var(--background-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+.close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  top: 8px;
+  border: 1px solid var(--modal-button-stroke);
+  border-radius: 50%;
+  cursor: pointer;
 }
 /* main portfolio section */
 
