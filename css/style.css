@@ -460,9 +460,9 @@ footer a:focus {
   visibility: visible;
   opacity: 1;
   transition-property: opacity, visibility;
-/*   animation: infinite;
+  animation: infinite;
   animation-duration: 1000ms;
-  animation-delay: 200ms; */
+  animation-delay: 200ms;
 }
 .is-hidden {
   opacity: 0;
