@@ -642,11 +642,13 @@ footer {
 .card-list-item {
   flex-basis: calc((100% - 60px) / 3);
   transition-property: box-shadow, cursor, transform;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 .card-list-item:hover {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
     1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  transform: scale(1.01);
+ 
 }
