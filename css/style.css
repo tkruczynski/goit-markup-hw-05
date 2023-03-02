@@ -340,7 +340,15 @@ button:focus {
   fill: var(--icon-color);
   display: block;
 }
-
+.team-social-icons {
+  transition-property: color, background-color, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.team-social-icons a:hover,
+.team-social-icons a:focus {
+  transform: scale(1.1);
+}
 .social-icons {
   display: flex;
   justify-content: center;
@@ -352,15 +360,11 @@ button:focus {
 .social-icons-footer > li {
   padding: 12px 12px;
   border-radius: 50%;
-  transition-property: color, background-color, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
 }
 
 .social-icons li:hover,
 .social-icons li:focus {
   background-color: var(--active-color);
-  transform: scale(1.1);
   --icon-color: var(--secondary-text-color);
   cursor: pointer;
 }
@@ -642,7 +646,7 @@ footer {
 .card-list-item {
   flex-basis: calc((100% - 60px) / 3);
   transition-property: box-shadow, cursor, transform;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 .card-list-item:hover {
@@ -650,5 +654,4 @@ footer {
     1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 2px 2px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transform: scale(1.01);
- 
 }
